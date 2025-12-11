@@ -1,0 +1,98 @@
+/* Bloque .hero-lore */
+.hero-lore {
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-lore__container {
+  width: 100%;
+  display: flex;
+  /* Alineamos la tarjeta a la izquierda o centro según diseño */
+  justify-content: flex-start; 
+}
+
+/* Elemento: Card (Efecto Glassmorphism) */
+.hero-lore__card {
+    margin: 0 auto;
+  background: rgba(255, 255, 255, 0.25); /* Fondo blanco semitransparente */
+  backdrop-filter: blur(12px); /* Efecto borroso detrás */
+  -webkit-backdrop-filter: blur(12px);
+  padding: 40px 50px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #333;
+}
+
+/* Elementos internos */
+.hero-lore__label {
+  display: block;
+  font-weight: bold;
+  color: #6d6d4e; /* Tono dorado oscuro */
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.hero-lore__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  color: #2c2c2c;
+  line-height: 1.2;
+}
+
+.hero-lore__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+.hero-lore__text p {
+  margin-bottom: 15px;
+}
+
+/* Botón */
+.hero-lore__button {
+  background-color: var(--color-btn-yellow);
+  color: var(--text-dark);
+  border: none;
+  padding: 12px 30px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  border-radius: 25px; /* Bordes muy redondeados */
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hero-lore__button:hover {
+  background-color: var(--color-btn-yellow-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-lore {
+    min-height: auto;
+    padding: 40px 0;
+  }
+
+  .hero-lore__card {
+    padding: 30px 20px;
+    margin: 0 15px; /* Margen lateral en móviles */
+  }
+
+  .hero-lore__title {
+    font-size: 1.8rem;
+  }
+}

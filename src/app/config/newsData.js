@@ -1,0 +1,38 @@
+export const newsData = [
+  {
+    id: '1',
+    image: 'https://i.imgur.com/n5yoyI2.jpeg',
+    title: 'The elephant - biggest animal UR',
+    description: 'Now that the Seeds of Unity Gamefound campaign is wrapping up,...',
+    timeAgo: 'about 1 hour ago',
+    readTime: '2 minutes',
+    link: '/news/shape-future-altered',
+  },
+  {
+    id: '2',
+    image: 'https://i.imgur.com/kTlAPKX.jpeg',
+    title: 'The Jaguar - a beautiful animal',
+    description: 'Looking to grow the Altered Community around you ? Join the...',
+    timeAgo: '15 days ago',
+    readTime: '6 minutes',
+    link: '/news/hive-missions',
+  },
+  {
+    id: '3',
+    image: 'https://i.imgur.com/MPPhg5a.jpeg',
+    title: 'The panther - Invisible in the dark',
+    description: 'The Seeds of Unity Gamefound campaign has officially concluded....',
+    timeAgo: '26 days ago',
+    readTime: '4 minutes',
+    link: '/news/seeds-unity-results',
+  },
+  {
+    id: '4',
+    image: 'https://i.imgur.com/AaEP8H9.jpeg',
+    title: 'The Jabalí - A dangerous animal',
+    description: 'We have witnessed an incredible wave of support in the last few days. We ar...',
+    timeAgo: '28 days ago',
+    readTime: '4 minutes',
+    link: '/news/seeds-unity-happening',
+  },
+];

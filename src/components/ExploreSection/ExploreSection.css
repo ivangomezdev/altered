@@ -1,0 +1,76 @@
+.explore-section {
+  width: 100%;
+}
+
+.explore-section__hero {
+  /* Quitamos el background de aquí para que no afecte al subtítulo */
+
+  padding: 60px 0 40px; /* Ajustamos padding vertical */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    background: #f5f0e8;
+}
+
+.explore-section__hero-title {
+  /* PROPIEDADES DE LA FRANJA DE FONDO */
+  width: 100%; /* Ocupa todo el ancho */
+  
+  /* El degradado va de Transparente -> Dorado -> Transparente */
+  background: linear-gradient(90deg, rgba(253, 238, 184, 0) 0%, #fdeeb8 25%, #fdeeb8 75%, rgba(253, 238, 184, 0) 100%);
+  
+  /* Espaciado interno para que la barra tenga altura */
+  padding: 15px 0;
+  
+  /* Separación con el subtítulo */
+  margin: 0 0 30px 0;
+
+  /* ESTILOS DEL TEXTO (Efecto 3D) */
+  font-size: 40px;
+  font-weight: 900;
+  color: #ffffff;
+  
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  
+  /* Borde azulado + Sombra dura marrón */
+  text-shadow: 
+    -1.5px -1.5px 0 #000000,  
+     1.5px -1.5px 0 #010b0e75,
+    -1.5px  1.5px 0 #010b0e75,
+     1.5px  1.5px 0 #010b0e75,
+     4px    4px   0 #b59560,
+     6px    6px   5px rgba(0, 0, 0, 0.2);
+}
+
+.explore-section__hero-subtitle {
+  font-size: 14px;
+  color: #666666;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 500;
+  padding: 0 20px; /* Un poco de margen lateral para móviles */
+}
+
+@media (max-width: 768px) {
+  .explore-section__hero-title {
+    font-size: 32px;
+    padding: 10px 0;
+    
+    /* Sombra ajustada para móvil */
+    text-shadow: 
+    -1px -1px 0 #010b0e75,  
+     1px -1px 0 #010b0e75,
+    -1px  1px 0 #010b0e75,
+     1px  1px 0 #010b0e75,
+     3px  3px 0 #b59560;
+  }
+
+  .explore-section__hero-subtitle {
+    font-size: 16px;
+  }
+}

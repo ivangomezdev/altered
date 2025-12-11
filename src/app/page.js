@@ -1,66 +1,97 @@
+"use client"
+import React from 'react';
 import Image from "next/image";
 import styles from "./page.module.css";
+import Navbar from "../components/NavBar/NavBar";
+import HeroComponent from '../components/HeroComponent/HeroComponent';
+
+import "../components/NavBar/NavBar.css";
+import NewsSelection from '@/components/NewsSelection/NewsSelection';
+import { newsData } from './config/newsData';
+import ExploreSection from '@/components/ExploreSection/ExploreSection';
+import HeroLore from '@/components/HeroLore/HeroLore';
+import PromoCards from '@/components/PromoCards/PromoCards';
+
+const logoData = {
+  src: "https://i.imgur.com/6jT5tnZ.png",
+  alt: "Logo del Proyecto"
+};
+
+const navigationItems = [
+  { 
+    href: "#cards", 
+    text: "Cards", 
+    iconSrc: "https://i.imgur.com/0xuzeXK.png", 
+    iconAlt: "Cards Icon" 
+  },
+  { 
+    href: "#decks", 
+    text: "Decks", 
+    iconSrc: "https://i.imgur.com/QWWDNlW.png", 
+    iconAlt: "Decks Icon" 
+  },
+  { 
+    href: "#pod", 
+    text: "POD", 
+    iconSrc: "https://i.imgur.com/SnL6gOc.png", 
+    iconAlt: "POD Icon" 
+  },
+  { 
+    href: "#events", 
+    text: "Events", 
+    iconSrc: "https://i.imgur.com/qWVOipG.png", 
+    iconAlt: "Events Icon" 
+  }
+];
 
 export default function Home() {
+
+  const handleMenuToggle = () => {
+    console.log("Botón de menú clickeado!");
+  };
+
+   const handleViewAll = () => {
+    console.log('View all news clicked');
+    // Navegar a la página de todas las noticias
+  };
+
+  const loreText = (
+    <>
+      <p>
+        During a planetary cataclysm now known as the Confluence, a magical storm swept over the world, 
+        merging the imaginary world and our own and transforming everything in its path.
+      </p>
+      <p>
+        After a few hundred years, with peace and prosperity finally secured, humanity has decided 
+        to venture beyond the frontiers of its home.
+      </p>
+    </>
+  );
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div>
+      
+      <div className="navbar-container">
+        <Navbar 
+          logo={logoData}
+          navItems={navigationItems}
+          onToggleClick={handleMenuToggle}
         />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        <button className="navbar-container__login-btn">
+          Login
+        </button>
+      </div>
+
+      <HeroComponent/>
+
+      <NewsSelection news={newsData} onViewAll={handleViewAll}/>
+            <ExploreSection />
+            <PromoCards/>
+<HeroLore 
+        title="Dive into the world of Altered"
+        description={loreText}
+        bgImage="https://i.imgur.com/GIh3Ogo.png" // Asegúrate de tener esta imagen
+      />
     </div>
   );
 }
