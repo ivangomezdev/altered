@@ -1,9 +1,8 @@
 /* Bloque .promo-section */
 .promo-section {
   padding: 50px 0; /* Espacio para que la imagen salga por arriba sin cortarse */
-
+  background-color: transparent;
   background-image: url("https://i.imgur.com/w4BLTov.png");
-  background: white;
 }
 
 .promo-section__container {
